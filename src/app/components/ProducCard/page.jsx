@@ -1,9 +1,6 @@
 import Link from "next/link";
 
-
-
-
-export default function ProductCard({ product, addToCart }:any) {
+export default function ProductCard({ product, addToCart }) {
   return (
     <div className="border rounded-lg p-4 shadow bg-white flex flex-col justify-between hover:shadow-lg transition-shadow">
       {/* Product Image */}
