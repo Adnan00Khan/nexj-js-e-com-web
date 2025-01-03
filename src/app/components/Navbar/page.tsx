@@ -9,7 +9,7 @@ export default function Navbar() {
      
         <div >
         <Link href="/">
-          <h1 className="mr-6 pr-40">Home</h1>
+          <h1 className="mr-6 lg:pr-40">Home</h1>
         </Link></div>
         <div className='flex '>
         <Link href="/cart">
