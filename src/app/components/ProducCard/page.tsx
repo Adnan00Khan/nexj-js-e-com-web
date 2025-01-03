@@ -14,10 +14,9 @@ type ProductCardProps = {
 };
 
 export default function ProductCard({ product, addToCart }: ProductCardProps) {
-
   return (
     <div className="border rounded-lg p-4 shadow bg-white flex flex-col justify-between hover:shadow-lg transition-shadow">
-      {/* Product Image and Info */}
+      {/* Product Image */}
       {product.img && (
         <img
           src={product.img}
@@ -26,8 +25,9 @@ export default function ProductCard({ product, addToCart }: ProductCardProps) {
           aria-label={`Image of ${product.name}`}
         />
       )}
+      {/* Product Information */}
       <h2 className="text-xl font-bold">{product.name}</h2>
-      <p className="text-gray-700">{product.description || 'No description available'}</p>
+      <p className="text-gray-700">{product.description || "No description available"}</p>
       <p className="text-lg font-semibold mt-2">${product.price.toFixed(2)}</p>
 
       {/* Product Details Link */}
@@ -43,8 +43,8 @@ export default function ProductCard({ product, addToCart }: ProductCardProps) {
       {/* Add to Cart Button */}
       <button
         onClick={(e) => {
-          e.stopPropagation(); // Prevent click from triggering on the product card
-          addToCart(product); // Add the product to the cart
+          e.stopPropagation(); // Prevent card click
+          addToCart(product); // Add product to cart
         }}
         className="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
         aria-label={`Add ${product.name} to cart`}
