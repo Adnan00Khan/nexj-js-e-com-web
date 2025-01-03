@@ -8,10 +8,12 @@ type Product = {
 };
 
 export async function fetchProducts(): Promise<Product[]> {
-  // Replace with actual API call
-  const response = await fetch('/api/products');
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000'; // Fallback to localhost for development
+  const response = await fetch(`${apiUrl}/api/products`);
+  
   if (!response.ok) {
-    throw new Error('Failed to fetch products');
+    throw new Error(`Failed to fetch products: ${response.status}`);
   }
+  
   return await response.json();
 }
