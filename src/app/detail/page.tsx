@@ -93,7 +93,7 @@ useEffect(() => {
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-      <Navbar cartCount={cart.length} />
+      <Navbar />
       <div className="bg-white p-6 rounded shadow">
       {product.img && (
         <img

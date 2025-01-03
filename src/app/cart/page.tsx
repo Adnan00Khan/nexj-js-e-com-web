@@ -88,7 +88,7 @@ export default function Cart() {
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-      <Navbar cartCount={cartItems.length} />
+      <Navbar />
       <h1 className="text-3xl font-semibold mb-6">Shopping Cart</h1>
       {cartItems.length === 0 ? (
         <div className="text-lg text-center py-10">

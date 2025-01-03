@@ -1,21 +1,23 @@
-// src/app/components/Navbar/page.tsx
-import React from "react";
+import Link from 'next/link';
 
-type NavbarProps = {
-  cartCount: number;
-};
 
-const Navbar = ({ cartCount }: NavbarProps) => {
+
+export default function Navbar() {
   return (
-    <nav className="bg-gray-800 text-white p-4">
-      <div className="flex justify-between">
-        <h1 className="text-2xl">E-commerce</h1>
-        <div>
-          <span>Cart: {cartCount}</span>
-        </div>
-      </div>
-    </nav>
+    <header className="bg-blue-600 p-4 text-white flex justify-between items-center">
+      <h1 className="text-2xl font-bold ">E-Commerce Site</h1>
+     
+        <div >
+        <Link href="/">
+          <h1 className="mr-6 pr-40">Home</h1>
+        </Link></div>
+        <div className='flex '>
+        <Link href="/cart">
+          <h1 className="relative w-14">
+            Cart
+          </h1>
+        </Link></div>
+        
+    </header>
   );
-};
-
-export default Navbar;
+}
