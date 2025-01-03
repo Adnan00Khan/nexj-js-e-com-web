@@ -31,16 +31,11 @@ export default function ProductDetail() {
   const params = useParams<{ productId: string }>();
   const productId = params?.productId; // Get the productId from the URL
   const router = useRouter();
-  const [cart, setCart] = useState<CartItem[]>([]);
+ 
 
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
-useEffect(() => {
-    const storedCart = localStorage.getItem('cart');
-    if (storedCart) {
-      setCart(JSON.parse(storedCart));
-    }
-  }, []);
+
   useEffect(() => {
     if (!productId) return;
 
