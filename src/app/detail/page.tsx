@@ -12,7 +12,7 @@ type Product = {
   description: string;
   img?: string; // Optional product image
 };
-type CartItem = Product & { quantity: number }; // Add quantity to CartItem
+
 
 // Simulated API function (replace with your actual API code if needed)
 const getProductById = (productId: string): Product | null => {
