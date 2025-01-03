@@ -35,7 +35,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/components/ProducCard/page.jsx"
+    "src/app/components/ProducCard/page.tsx"
   ],
   "exclude": [
     "node_modules"
