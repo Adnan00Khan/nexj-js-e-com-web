@@ -1,12 +1,5 @@
 import Link from "next/link";
 
-type Product = {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-  img?: string; // Optional product image
-};
 
 
 
