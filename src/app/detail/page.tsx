@@ -60,7 +60,7 @@ useEffect(() => {
     if (!product) return;
 
     const storedCart = localStorage.getItem("cart");
-    let updatedCart = storedCart ? JSON.parse(storedCart) : [];
+    const updatedCart = storedCart ? JSON.parse(storedCart) : [];
 
     const existingItemIndex = updatedCart.findIndex((item: Product) => item.id === product.id);
     if (existingItemIndex !== -1) {

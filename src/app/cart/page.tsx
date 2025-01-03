@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar/page';
+import Link from 'next/link';
 
 type Product = {
   id: number;
@@ -92,12 +93,12 @@ export default function Cart() {
       {cartItems.length === 0 ? (
         <div className="text-lg text-center py-10">
           <p className="text-gray-600">Your cart is empty.</p>
-          <a
+          <Link
             href="/"
             className="text-blue-600 underline hover:text-blue-800 mt-4 inline-block"
           >
             Go back to shopping
-          </a>
+          </Link>
         </div>
       ) : (
         <>
