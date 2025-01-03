@@ -8,12 +8,9 @@ type Product = {
   img?: string; // Optional product image
 };
 
-type ProductCardProps = {
-  product: Product;
-  addToCart: (product: Product) => void;
-};
 
-export default function ProductCard({ product, addToCart }: ProductCardProps) {
+
+export default function ProductCard({ product, addToCart }:any) {
   return (
     <div className="border rounded-lg p-4 shadow bg-white flex flex-col justify-between hover:shadow-lg transition-shadow">
       {/* Product Image */}
